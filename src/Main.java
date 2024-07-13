@@ -15,7 +15,17 @@ public class Main {
 
             int escolha = scanner.nextInt();
 
-            if (escolha == 5) {}
+            if (escolha == 5) {
+                System.out.println("Saindo");
+                break;
+            }
+
+            System.out.println("Digite um valor: ");
+            double num1 = scanner.nextDouble();
+
+            System.out.println("Digite um valor: ");
+            double num2 = scanner.nextDouble();
+
         }
     }
 }
