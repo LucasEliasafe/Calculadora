@@ -16,9 +16,17 @@ public class Main {
 
             int escolha = scanner.nextInt();
 
-            if (escolha == 5) {
+            if (escolha == 6) {
                 System.out.println("Saindo");
                 break;
+            }
+
+            if (escolha == 5) {
+                List<String> historico = calculadora.getHistorico();
+                for (String operacao : historico) {
+                    System.out.println(operacao);
+                }
+                continue;
             }
 
             System.out.println("Digite um valor: ");
@@ -47,6 +55,7 @@ public class Main {
                     try {
                         resultado = calculadora.dividir(num1, num2);
                     } catch (ArithmeticException e) {
+                        System.out.println("Erro: " + e.getMessage());
                         operacaoValida = false;
                     }
                     break;
