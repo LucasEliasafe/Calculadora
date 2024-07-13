@@ -26,6 +26,38 @@ public class Main {
             System.out.println("Digite um valor: ");
             double num2 = scanner.nextDouble();
 
+            double resultado = 0;
+            boolean operacaoValida = true;
+
+            switch (escolha) {
+                case 1:
+                    resultado = calculadora.adicionar(num1, num2);
+                    break;
+
+                case 2:
+                    resultado = calculadora.subtrair(num1, num2);
+                    break;
+
+                case 3:
+                    resultado = calculadora.multiplicar(num1, num2);
+                    break;
+
+                case 4:
+                    try {
+                        resultado = calculadora.dividir(num1, num2);
+                    } catch (ArithmeticException e) {
+                        operacaoValida = false;
+                    }
+                    break;
+                default:
+                    System.out.println("Operação Inválida");
+                    operacaoValida = false;
+            }
+
+            if (operacaoValida) {
+                System.out.println("Resultado: " + resultado);
+            }
         }
+        scanner.close();
     }
 }
