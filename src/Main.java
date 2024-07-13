@@ -11,8 +11,8 @@ public class Main {
             System.out.println("2 - Subtrair");
             System.out.println("3 - Multiplicar");
             System.out.println("4 - Dividir");
-            System.out.println("0 - ");
-            System.out.println("5 - Sair");
+            System.out.println("5 - Ver Histórico");
+            System.out.println("6 - Sair");
 
             int escolha = scanner.nextInt();
 
