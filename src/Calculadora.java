@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Calculadora {
     private List<String> historico = new ArrayList<>();
+    private double memoria;
 
     public double adicionar(double a, double b) {
         double resultado = a + b;
@@ -29,6 +30,17 @@ public class Calculadora {
         double resultado = a / b;
         historico.add(a + " / " + b + " = " + resultado);
         return resultado;
+    }
+
+    public double raizQuadrada(double a) {
+        double resultado = Math.sqrt(a);
+        historico.add("√" + a + " = " + resultado);
+        return resultado;
+    }
+
+    public double porcentagem(double a, double b) {
+        double resultado = a * b / 100;
+        his
     }
 
     public List<String> getHistorico() {
