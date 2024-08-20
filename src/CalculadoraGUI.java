@@ -32,7 +32,25 @@ public class CalculadoraGUI extends JFrame implements ActionListener{
                 "0", ".", "=", "+",
         };
 
-        for (String label : )
+        for (String label : labels) {
+            JButton botao = new JButton(label);
+            botao.setFont(new Font("Arial", Font.PLAIN, 36));
+            botao.addActionListener(this);
+            painel.add(botao);
+        }
+
+        add(painel, BorderLayout.CENTER);
+        setVisible(true);
     }
 
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String comando = e.getActionCommand();
+
+        switch(comando){
+
+        }
+    }
 }
